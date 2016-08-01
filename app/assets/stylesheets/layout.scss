@@ -1,3 +1,38 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#header {
+ background: url("https://images8.alphacoders.com/599/599163.jpg") no-repeat top center fixed;
+ background-size: cover;
+ height: 400px;
+ width: 100%;
+ margin: 0;
+ padding: 0;
+ color: white;
+ text-align: center;
+ font-size: 50px;
+}
+
+#header-content {
+  margin-top: 50px;
+  max-height: 200px;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#content {
+  padding-bottom: 95px; /* this needs to be bigger than footer height*/
+  padding-top: 0px;
+}
+
+#footer {
+  position: relative;
+  margin-top: -93px; /* negative value of footer height */
+  height: 93px;
+  clear: both;
+  padding-top: 20px;
+}

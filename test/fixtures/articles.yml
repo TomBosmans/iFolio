@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyFirstblog
+  content: "Hallo this is my first blog!"
+  published: true
+  thumbnail: MyString
+
+two:
+  name: NotPublished
+  content: "This article is not yet published!"
+  published: false
+  thumbnail: MyString

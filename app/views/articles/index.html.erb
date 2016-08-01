@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Article', new_article_path %>
+<div id="articles" class="transitions-enabled">
+  <% @articles.each do |article| %>
+    <%= render partial: "article", locals: { article: article } %>
+  <% end %>
+</div>
