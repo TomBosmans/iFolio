@@ -4,20 +4,16 @@ html, body {
 }
 
 #header {
- background: url("https://images8.alphacoders.com/599/599163.jpg") no-repeat top center fixed;
- background-size: cover;
- height: 400px;
- width: 100%;
- margin: 0;
- padding: 0;
- color: white;
- text-align: center;
- font-size: 50px;
-}
-
-#header-content {
-  margin-top: 50px;
-  max-height: 200px;
+// background: url("http://www.push-start.co.uk/wp-content/uploads/2015/09/fallout-4-banner-1.jpg") no-repeat top center fixed;
+  background-color: #1d356f;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 50px;
 }
 
 #wrap {

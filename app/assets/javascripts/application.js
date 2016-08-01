@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery.minicolors
+//= require jquery.minicolors.simple_form
 //= require jquery_ujs
 //= require tether
 //= require bootstrap-sprockets

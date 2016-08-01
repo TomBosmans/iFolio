@@ -17,8 +17,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
 
+gem 'simple_form'
 gem 'jquery-minicolors-rails'
-
 
 group :development, :test do
   gem 'byebug'

@@ -1,6 +1,6 @@
-class Article < ActiveRecord::Base
+class Category < ActiveRecord::Base
   # associations
-  belongs_to :category
+  has_many :articles, dependent: :destroy
   
   # validations
   validates :name, presence: true, length: { maximum: 255 }

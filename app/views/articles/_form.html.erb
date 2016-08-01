@@ -1,38 +1,10 @@
-<%= form_for(@article) do |f| %>
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
-      <ul>
-      <% @article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :caption %><br>
-    <%= f.text_field :caption %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="field">
-    <%= f.label :published %><br>
-    <%= f.check_box :published %>
-  </div>
-  <div class="field">
-    <%= f.label :thumbnail %><br>
-    <%= f.text_field :thumbnail %>
-  </div>
-  <%= f.input :color, as: :minicolors, input_html: { data: { minicolors: { theme: :bootstrap, position: :right} } } %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@article) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :caption %>
+  <%= f.input :content %>
+  <%= f.input :published %>
+  <%= f.input :thumbnail %>
+  <%= f.association :category, label_method: :name, value_method: :id, include_blank: false %>
+  
+  <%= f.button :submit %>
 <% end %>
