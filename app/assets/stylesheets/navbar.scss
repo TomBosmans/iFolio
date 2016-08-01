@@ -1,34 +1,38 @@
-.hidden{
+.hidden {
   visibility: hidden;
 }
 
-.navbar-light{
+.navbar-light {
   background-color: #ffffff;
 }
 
-#navbar{
+.navbar-brand img {
+  width: 3rem;
+}
+
+#navbar {
   opacity: 0.98;
   filter: alpha(opacity=95);
   vertical-align: center;
   line-height: 50px;
 }
 
-#navbar-title{
+#navbar-title {
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 2px;
   color: black;
 }
 
-#navbar-link{
+#navbar-link {
   font-size: 15px;
   color: #C0C0C0;
 }
 
-#navbar-link:hover{
+#navbar-link:hover {
   color: #808080;
 }
 
-#navbar-link.active{
+#navbar-link.active {
   text-decoration: underline;
 }
