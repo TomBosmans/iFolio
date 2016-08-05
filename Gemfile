@@ -20,6 +20,8 @@ end
 gem 'simple_form'
 gem 'jquery-minicolors-rails'
 
+gem 'devise'
+
 group :development, :test do
   gem 'byebug'
 end
