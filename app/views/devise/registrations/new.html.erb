@@ -1,17 +1,25 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 .col-lg-offset-4 col-md-offset-4">
+  <div class="panel panel-default centered">
+    <div class="panel-heading">
+      <h4 align="center"><%= t("authentication.sign_up") %></h4>
+    </div>
+    <hr class="m-y-2">
+    <div class="panel-body">
+       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), wrapper: :horizontal_form, validate: true, html: { class: 'form-horizontal' } ) do |f| %>
+        <%= f.error_notification %>
+        <div class="form-inputs form-group">
+          <%= f.input :email, placeholder: t("authentication.enter_email"), required: true, autofocus: true %>
+          <%= f.input :password, placeholder: t("authentication.enter_password"), required: true %>
+          <%= f.input :password_confirmation, placeholder: t("authentication.enter_password_confirmation"), required: true %>
+        </div>
+        <div align="center" class="form-actions">
+          <%= f.button :submit, t("authentication.sign_up") %>
+        </div>
+      <% end %>
+    </div>
+    <hr class="m-y-2">
+    <div align="center">
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

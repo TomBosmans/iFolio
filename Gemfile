@@ -18,6 +18,9 @@ source 'https://rails-assets.org' do
 end
 
 gem 'simple_form'
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'
+
 gem 'jquery-minicolors-rails'
 
 gem 'devise'
