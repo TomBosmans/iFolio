@@ -8,7 +8,13 @@
        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), wrapper: :horizontal_form, validate: true, html: { class: 'form-horizontal' } ) do |f| %>
         <%= f.error_notification %>
         <div class="form-inputs form-group">
-          <%= f.input :email, placeholder: t("authentication.enter_email"), required: true, autofocus: true %>
+          <%= f.simple_fields_for :profile do |p| %>
+            <%= p.input :firstname, required: true, autofocus: true  %>
+            <%= p.input :lastname, required: true %>
+            <%= p.input :bio %>
+            <%= p.input :profile_picture %>
+          <% end %>
+          <%= f.input :email, placeholder: t("authentication.enter_email"), required: true %>
           <%= f.input :password, placeholder: t("authentication.enter_password"), required: true %>
           <%= f.input :password_confirmation, placeholder: t("authentication.enter_password_confirmation"), required: true %>
         </div>

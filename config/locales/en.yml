@@ -31,3 +31,6 @@ en:
     edit: "Edit"
     destroy: "Destroy"
     are_you_sure: "Are you sure?"
+    
+  Article:
+    new_article: "Write!"

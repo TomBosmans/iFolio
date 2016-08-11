@@ -1,7 +1,17 @@
 <nav class="navbar navbar-fixed-top navbar-light bg-faded">
   <a class="navbar-brand" href="#">Fixed top</a>
   <% if user_signed_in? %>
-    <%= link_to('logout', destroy_user_session_path, method: :delete) %> |
-    <%= link_to "Account", edit_user_registration_path %>
+    <form class="form-inline pull-xs-left">
+      <%= link_to('logout', destroy_user_session_path, method: :delete) %>
+    </form>
+
+    <form class="form-inline pull-xs-right">
+      <a class="navbar-brand" href=<%= edit_user_registration_path %>>
+        <img class="img-rounded" src=<%= current_user.profile.profile_picture %>>
+      </a>
+      <a class="btn btn-default" href=<%= new_article_path %>><%= t("article.new_article") %></a>
+    </form>
+  <% else %>
+    <%= link_to('Login', new_user_session_path)  %>  
   <% end %>  
 </nav>
