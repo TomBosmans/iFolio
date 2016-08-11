@@ -1,29 +1,7 @@
-<p id="notice"><%= notice %></p>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_article_path(@article) %>
+<% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @article.name %>
-</p>
+<%= raw @article.content %>
 
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
 
-<p>
-  <strong>Published:</strong>
-  <%= @article.published %>
-</p>
-
-<p>
-  <strong>Thumbnail:</strong>
-  <%= @article.thumbnail %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @article.category_id %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>

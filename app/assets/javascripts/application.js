@@ -15,6 +15,7 @@
 //= require jquery.minicolors.simple_form
 //= require rails.validations
 //= require rails.validations.simple_form
+//= require tinymce-jquery
 //= require jquery_ujs
 //= require tether
 //= require bootstrap-sprockets

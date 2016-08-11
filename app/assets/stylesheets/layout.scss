@@ -33,3 +33,8 @@ html, body {
   clear: both;
   padding-top: 20px;
 }
+
+// fullscreen for tinymce
+div.mce-fullscreen {
+    z-index: 1050;
+}

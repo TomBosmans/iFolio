@@ -23,6 +23,8 @@ gem 'client_side_validations-simple_form'
 
 gem 'jquery-minicolors-rails'
 
+gem 'tinymce-rails'
+
 gem 'devise'
 
 group :development, :test do

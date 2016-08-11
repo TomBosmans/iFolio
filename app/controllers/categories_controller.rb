@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @category = Category.new
+    @category = Category.new(user_id: current_user.id)
   end
 
   def edit
@@ -56,6 +56,6 @@ class CategoriesController < ApplicationController
     end
 
     def category_params
-      params.require(:category).permit(:name, :color)
+      params.require(:category).permit(:name, :color, :user_id)
     end
 end

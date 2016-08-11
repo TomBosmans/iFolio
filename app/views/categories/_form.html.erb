@@ -1,5 +1,8 @@
-<%= simple_form_for(@category, html: { class: 'form-horizontal' }) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :color, as: :minicolors %>
-  <%= f.button :submit %>
+<%= simple_form_for(@category, wrapper: :horizontal_form, validate: true, html: { class: 'form-horizontal' }) do |f| %>
+  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 .col-lg-offset-4 col-md-offset-4">
+    <%= f.input :user_id, as: :hidden %>
+    <%= f.input :name %>
+    <%= f.input :color, as: :minicolors %>
+    <%= f.button :submit %>
+  </div>
 <% end %>
