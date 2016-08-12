@@ -2,7 +2,8 @@
   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 .col-lg-offset-4 col-md-offset-4">
     <%= f.input :user_id, as: :hidden %>
     <%= f.input :name %>
-    <%= f.input :color, as: :minicolors %>
+    <%= f.input :color, as: :minicolors, input_html: {data: {
+          minicolors: {theme: :bootstrap, position: :left}}} %>
     <%= f.button :submit %>
   </div>
 <% end %>

@@ -1,6 +1,9 @@
 <% if current_page?(articles_path) %>
   <div class="jumbotron">
-    <h4 align="center"><%= t("category.categories") %></h4>
+    <div align="center">
+      <h4><%= t("category.categories") %></h4>
+      <%= link_to 'New Category', new_category_path %>
+    </div>
     <hr class="m-y-2">
     <fieldset id="category_filters">
       <% @categories.each do |category| %>
