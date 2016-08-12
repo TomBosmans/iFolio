@@ -3,7 +3,16 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.where(published: true, category_id: current_user.categories.pluck(:id)) 
+    if (params[:categories]) then
+      @articles = Article.where(published: true, category_id: params[:categories])
+    else 
+      @articles = Article.where(published: true, category_id: current_user.categories.pluck(:id))
+    end
+    
+    @categories = Article.where(published: true, category_id: current_user.categories.pluck(:id)).map(&:category).compact.uniq
+    
+    # @categories = @articles.map(&:category).compact.uniq
+    
   end
 
   def show

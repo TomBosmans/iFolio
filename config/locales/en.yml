@@ -34,3 +34,6 @@ en:
     
   article:
     new_article: "New Article"
+  
+  category:
+    categories: "Categories"

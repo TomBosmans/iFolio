@@ -1,0 +1,13 @@
+<% if current_page?(articles_path) %>
+  <div class="jumbotron">
+    <h4 align="center"><%= t("category.categories") %></h4>
+    <hr class="m-y-2">
+    <fieldset id="category_filters">
+      <% @categories.each do |category| %>
+        <%= check_box_tag("category_filter_#{category.id}", category.id) %>
+        <b style="color:<%= category.color %>"><%= category.name %></b>
+        <br>
+      <% end %>
+    </fieldset>
+  </div>
+<% end %>
