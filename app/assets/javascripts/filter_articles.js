@@ -13,8 +13,8 @@ $(document).on('turbolinks:load', function() {
 function filterArticles(categories){
   $.ajax({
     type:"GET",
-    url:"articles",
     dataType:"script",
+    url: window.location.href,
     data: {categories: categories},
   })
 }

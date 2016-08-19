@@ -8,7 +8,8 @@ class ProfilesController < ApplicationController
 
   def show
     @categories = Article.where(published: true, category_id: @profile.user.categories.pluck(:id)).map(&:category).compact.uniq
-    @articles = Article.where(published: true, category_id: @categories.map(&:id))
+    @articles = Article.where(published: true, category_id: @categories.map(&:id)) unless params[:categories]
+    @articles = Article.where(published: true, category_id: params[:categories]) if params[:categories]
   end
 
   def new

@@ -1,16 +1,16 @@
-<% if current_page?(articles_path) %>
-  <div class="jumbotron">
-    <div align="center">
-      <h4><%= t("category.categories") %></h4>
+<div class="jumbotron">
+  <div align="center">
+    <h4><%= t("category.categories") %></h4>
+    <% if categories.first.user == current_user %>
       <%= link_to 'New Category', new_category_path %>
-    </div>
-    <hr class="m-y-2">
-    <fieldset id="category_filters">
-      <% @categories.each do |category| %>
-        <%= check_box_tag("category_filter_#{category.id}", category.id) %>
-        <b style="color:<%= category.color %>"><%= category.name %></b>
-        <br>
-      <% end %>
-    </fieldset>
+    <% end %>
   </div>
-<% end %>
+  <hr class="m-y-2">
+  <fieldset id="category_filters">
+    <% categories.each do |category| %>
+      <%= check_box_tag("category_filter_#{category.id}", category.id) %>
+      <b style="color:<%= category.color %>"><%= category.name %></b>
+      <br>
+    <% end %>
+  </fieldset>
+</div>
