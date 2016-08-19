@@ -1,17 +1,33 @@
-<nav class="navbar navbar-fixed-top navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Fixed top</a>
-  <% if user_signed_in? %>
-    <form class="form-inline pull-xs-left">
-      <%= link_to('logout', destroy_user_session_path, method: :delete) %>
-    </form>
-
-    <form class="form-inline pull-xs-right">
-      <a class="navbar-brand" href=<%= edit_user_registration_path %>>
-        <img class="img-rounded" src=<%= current_user.profile.profile_picture %>>
-      </a>
-      <a class="btn btn-default" href=<%= new_article_path %>><%= t("article.new_article") %></a>
-    </form>
-  <% else %>
-    <%= link_to('Login', new_user_session_path)  %>  
-  <% end %>  
-</nav>
+<% if user_signed_in? %>
+  <nav id="navbar" class="navbar navbar-fixed-top navbar-light">
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= t("nav.startpage") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= t("nav.notifications") %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= t("nav.messages") %></a>
+      </li>
+      <form class="form-inline pull-xs-right">
+        <li class="nav-item dropdown">
+          <a id="navbar-profile-picture" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="img-rounded" src=<%= current_user.profile.profile_picture %>>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="<%= edit_user_registration_path %>"><%= t("authentication.edit_account") %></a>
+            <div class="dropdown-divider"></div>
+            <%= link_to(t("authentication.sign_out"), destroy_user_session_path, method: :delete, class: "dropdown-item") %>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= new_article_path %>"><%= t("article.new_article") %></a>
+        </li>
+      </form>
+    </ul>
+  </nav>
+<% end %>
+       

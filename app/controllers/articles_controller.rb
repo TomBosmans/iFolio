@@ -10,9 +10,6 @@ class ArticlesController < ApplicationController
     end
     
     @categories = Article.where(published: true, category_id: current_user.categories.pluck(:id)).map(&:category).compact.uniq
-    
-    # @categories = @articles.map(&:category).compact.uniq
-    
   end
 
   def show

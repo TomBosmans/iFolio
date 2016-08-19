@@ -13,6 +13,7 @@ en:
     enter_password_confirmation: "Enter Password Confirmation"
     sign_in:  "Sign In"
     sign_up:  "Sign Up"
+    sign_out: "Sign Out"
     remember_me: "Remember Me"
     send_instructions: "Send Instructions"
     forgot_your_password: "Forgot Your Password?"

@@ -3,10 +3,12 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   def index
-    @profiles = Profile.all
+    @profiles = Profile.search(params[:search]).paginate(per_page: 5, page: params[:page])
   end
 
   def show
+    @categories = Article.where(published: true, category_id: @profile.user.categories.pluck(:id)).map(&:category).compact.uniq
+    @articles = Article.where(published: true, category_id: @categories.map(&:id))
   end
 
   def new
@@ -52,7 +54,7 @@ class ProfilesController < ApplicationController
 
   private
     def set_profile
-      @profile = current_user.profile
+      @profile = Profile.find(params[:id])
     end
 
     def profile_params

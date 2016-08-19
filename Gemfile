@@ -23,6 +23,8 @@ gem 'client_side_validations-simple_form'
 
 gem 'jquery-minicolors-rails'
 
+gem 'will_paginate'
+
 gem 'tinymce-rails'
 
 gem 'devise'

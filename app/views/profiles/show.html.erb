@@ -1,24 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Firstname:</strong>
-  <%= @profile.firstname %>
-</p>
-
-<p>
-  <strong>Lastname:</strong>
-  <%= @profile.lastname %>
-</p>
-
-<p>
-  <strong>Profile picture:</strong>
-  <%= @profile.profile_picture %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @profile.bio %>
-</p>
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2">
+      <div id="articles" class="transitions-enabled">
+        <% @articles.each do |article| %>
+          <%= render partial: "articles/article", locals: { article: article } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

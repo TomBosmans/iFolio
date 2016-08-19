@@ -10,22 +10,11 @@
   </head>
   <body>
     <%= render "layouts/navbar" %>
-    <!--<div id="header">-->
-    <!--  <%= render "layouts/profile" %>-->
-    <!--  <%= render "layouts/profile_navbar" %>-->
-    <!--</div>-->
     <div id="wrap">
-        <div id="content" class="container-fluid">
-          <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2">
-              <%= flash_messages %>
-              <%= yield %>
-            </div>
-            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-              <%= render "categories/categories" %>
-            </div>
-          </div>
-        </div>
+      <div id="content" class="container-fluid">
+        <%= flash_messages %>
+        <%= yield %>
+      </div>
     </div>
     <div id="footer">
       <%= render "layouts/footer" %>
