@@ -1,16 +1,19 @@
+default: &default
+      adapter: postgresql
+      encoding: unicode
+      pool: 5
+      username: <%= ENV['DBUSERNAME'] %>
+      password: <%= ENV['DBPASSWORD'] %>
+      host:     <%= ENV['DBIP'] %>
+
 development:
-  adapter: postgresql
-  database: ifolio_development
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: app_development
+
 test:
-  adapter: postgresql
-  database: ifolio_test
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: app_test
 
 production:
-  adapter: postgresql
-  database: ifolio_production
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: app_production
