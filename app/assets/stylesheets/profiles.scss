@@ -1,14 +1,37 @@
 #header-content {
-  position: absolute;
   margin-top: 3rem;
   max-height: 100px;
 }
 
+#profile-navbar-picture {
+  width: 280px;
+  height: 75px;
+}
+
+#profile-navbar-picture img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  margin-top: -125px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#profile-navbar{
+  vertical-align: center;
+  background-color: #ffffff;
+  font-size: 15px;
+  padding-left: 165px;
+  padding-bottom: 0;
+  z-index: 1;
+  
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.42);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.42);
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.42);
+}
 #profile-picture {
   width: 5rem;
 }
 
-#profile-image {
-  max-width: 100%;
-  max-height: 13rem;
-}

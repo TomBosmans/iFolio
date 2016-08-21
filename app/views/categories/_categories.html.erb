@@ -1,7 +1,7 @@
-<div class="jumbotron">
+<div>
   <div align="center">
     <h4><%= t("category.categories") %></h4>
-    <% if categories.first.user == current_user %>
+    <% if @profile.user == current_user %>
       <%= link_to 'New Category', new_category_path %>
     <% end %>
   </div>

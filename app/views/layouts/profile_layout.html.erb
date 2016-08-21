@@ -10,14 +10,15 @@
   </head>
   <body>
     <%= render "layouts/navbar" %>
+    <div id="header" style="background-image: url(<%= @profile.banner_picture %>)"></div>
+    <%= render "layouts/profile_navbar" %>
     <div id="wrap">
-      <div id="content">
-        <%= flash_messages %>
-        <%= yield %>
-      </div>
+        <div id="content">
+            <%= yield %>
+          </div>
+        </div>
     </div>
     <div id="footer">
       <%= render "layouts/footer" %>
     </div>
-  </body>
 </html>

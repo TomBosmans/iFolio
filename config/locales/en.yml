@@ -38,3 +38,6 @@ en:
   
   category:
     categories: "Categories"
+  
+  profile:
+    go_to_profile: "Go To Your Profile"

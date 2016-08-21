@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  layout "profile_layout", only: [:show]
   before_action :authenticate_user!
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
@@ -59,6 +60,6 @@ class ProfilesController < ApplicationController
     end
 
     def profile_params
-      params.require(:profile).permit(:firstname, :lastname, :profile_picture, :bio, :user_id)
+      params.require(:profile).permit(:firstname, :lastname, :profile_picture, :banner_picture, :bio, :user_id)
     end
 end

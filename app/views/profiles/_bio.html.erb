@@ -1,0 +1,10 @@
+<div>
+  <div align="center">
+    <h4><%= "#{ profile.firstname } #{ profile.lastname }" %></h4>
+    <% if profile.user == current_user %>
+      <%= link_to t("basic.edit"), edit_profile_path(profile) %>
+    <% end %>
+  </div>
+  <hr class="m-y-2">
+  <p> <%= profile.bio %> </p>
+</div>
