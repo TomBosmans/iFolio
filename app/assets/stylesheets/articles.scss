@@ -2,6 +2,12 @@
   margin: 0 auto;
 }
 
+#article-content {
+  position: relative;
+  overflow-y: scroll;
+  height: 429px;
+}
+
 .box {
   margin: 5px;
   width: 250px;

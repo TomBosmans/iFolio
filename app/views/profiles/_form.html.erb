@@ -1,7 +1,5 @@
-<%= simple_form_for(@profile) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
+<%= simple_form_for(@profile, wrapper: :horizontal_form, validate: true, html: { class: 'form-horizontal' }) do |f| %>
+   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 .col-lg-offset-4 col-md-offset-4">
     <%= f.input :firstname %>
     <%= f.input :lastname %>
     <%= f.input :profile_picture %>
@@ -9,7 +7,7 @@
     <%= f.input :bio %>
   </div>
 
-  <div class="form-actions">
+  <div align="center" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 .col-lg-offset-4 col-md-offset-4">
     <%= f.button :submit %>
   </div>
 <% end %>

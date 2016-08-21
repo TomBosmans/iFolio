@@ -1,8 +1,4 @@
 // Using Masonry on articles
-$(document).on('turbolinks:load', function() {
-  initialiceMasonry();
-});
-
 function initialiceMasonry(){
     $(function() {
     $('#articles').masonry({
@@ -11,3 +7,12 @@ function initialiceMasonry(){
     });
   });
 }
+
+function initialiceScrollspy(){
+  $('#article-content').scrollspy({ target: '#navbar-article' })
+}
+
+$(document).on('turbolinks:load', function() {
+  initialiceMasonry();
+  initialiceScrollspy();
+});

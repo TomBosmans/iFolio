@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  layout "profile_layout", only: [:show]
   before_action :authenticate_user!, :except => [:show]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
@@ -13,6 +14,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @profile = @article.category.user.profile
   end
 
   def new
