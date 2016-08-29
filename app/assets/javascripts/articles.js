@@ -9,7 +9,7 @@ function initialiceMasonry(){
 }
 
 function initialiceScrollspy(){
-  var headers = $('#article-content h1').get();
+  var headers = $('#article-content :header');
   for (var i = 0; i < headers.length; i++) {
     var id = "header-"+i
     headers[i].setAttribute("id", id);
