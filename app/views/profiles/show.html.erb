@@ -1,8 +1,10 @@
 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-  <div id="articles" class="transitions-enabled">
-    <% @articles.each do |article| %>
-      <%= render partial: "articles/article", locals: { article: article } %>
-    <% end %>
+  <div id="articles-background">
+    <div id="articles" class="transitions-enabled">
+      <% @articles.each do |article| %>
+        <%= render partial: "articles/article", locals: { article: article } %>
+      <% end %>
+    </div>
   </div>
 </div>
 <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
